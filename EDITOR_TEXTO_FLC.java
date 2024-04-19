@@ -11,7 +11,7 @@ public class EDITOR_TEXTO_FLC extends JFrame {
     private JButton botonSubrayado;
     private JButton botonColor;
     private JButton botonTamano;
-    private JComboBox<String> comboBoxTipos; // Nuevo ComboBox para cambiar el tipo de letra
+    private JComboBox<String> comboBoxTipos; 
 
     public EDITOR_TEXTO_FLC() {
         setTitle("Editor de Texto");
@@ -36,26 +36,26 @@ public class EDITOR_TEXTO_FLC extends JFrame {
 
         String[] tiposLetras = {"Arial", "Times New Roman", "Verdana", "Tahoma", "Courier New"};
         comboBoxTipos = new JComboBox<>(tiposLetras);
-        comboBoxTipos.addActionListener(new FontTypeListener()); // Agregar el listener para cambiar el tipo de letra
+        comboBoxTipos.addActionListener(new FontTypeListener()); 
 
         JScrollPane scrolTexto = new JScrollPane(panelTexto);
 
-        JPanel panelBotones = new JPanel(new FlowLayout(FlowLayout.LEFT)); // Panel para los botones en la parte superior
+        JPanel panelBotones = new JPanel(new FlowLayout(FlowLayout.LEFT)); 
 
         panelBotones.add(botonNegrita);
-        panelBotones.add(Box.createRigidArea(new Dimension(10, 0))); // Espacio rígido entre los botones
+        panelBotones.add(Box.createRigidArea(new Dimension(10, 0))); 
         panelBotones.add(botonCursiva);
-        panelBotones.add(Box.createRigidArea(new Dimension(10, 0))); // Espacio rígido entre los botones
+        panelBotones.add(Box.createRigidArea(new Dimension(10, 0))); 
         panelBotones.add(botonSubrayado);
-        panelBotones.add(Box.createRigidArea(new Dimension(10, 0))); // Espacio rígido entre los botones
+        panelBotones.add(Box.createRigidArea(new Dimension(10, 0))); 
         panelBotones.add(botonColor);
-        panelBotones.add(Box.createRigidArea(new Dimension(10, 0))); // Espacio rígido entre los botones
+        panelBotones.add(Box.createRigidArea(new Dimension(10, 0))); 
         panelBotones.add(botonTamano);
-        panelBotones.add(Box.createRigidArea(new Dimension(10, 0))); // Espacio rígido entre los botones
-        panelBotones.add(comboBoxTipos);// Agregar el ComboBox al panel
+        panelBotones.add(Box.createRigidArea(new Dimension(10, 0))); 
+        panelBotones.add(comboBoxTipos);
 
         getContentPane().setLayout(new BorderLayout());
-        getContentPane().add(panelBotones, BorderLayout.NORTH); // Agregar el panel de botones en la parte superior
+        getContentPane().add(panelBotones, BorderLayout.NORTH); 
         getContentPane().add(scrolTexto, BorderLayout.CENTER);
     }
 
